@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Vasavi Yerra - Portfolio</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: "Poppins", sans-serif;
+      color: #fff;
+      background-color: #0b132b;
+      line-height: 1.5;
+    }
+
+    /* Header */
+    .header {
+      min-height: 80vh;
+      background: radial-gradient(circle at center, #163b93, #0b132b);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2vh 2vw;
+    }
+
+    /* Navbar */
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 2vw;
+    }
+    .navbar a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1rem;
+      transition: color .2s;
+    }
+    .navbar a:hover { color: #4da6ff; }
+
+    /* Profile */
+    .profile-container {
+      margin-top: 3vh;
+      text-align: center;
+    }
+    .profile-pic {
+      width: clamp(120px, 25vw, 200px);
+      height: clamp(120px, 25vw, 200px);
+      border-radius: 70%;
+      border: 4px solid #4da6ff;
+      object-fit: cover;
+    }
+    .profile-container h1 {
+      margin-top: 1rem;
+      font-size: 2rem;
+      color: #fff;
+    }
+    .profile-container p {
+      color: #a9c1f3;
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Sections */
+    .container {
+      max-width: 900px;
+      width: 92%;
+      margin: 2vh auto;
+    }
+    .content-section {
+      background-color: #212c3b;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.45);
+      margin-bottom: 1.5rem;
+    }
+
+    h2.section-title {
+      color: #fff;
+      font-size: 1.6rem;
+      margin-bottom: 1rem;
+      border-bottom: 2px solid #4da6ff;
+      padding-bottom: 6px;
+    }
+
+    p { color: #d0d8e2; font-size: 1rem; }
+
+    strong { color: #61dafb; }
+
+    /* Projects */
+    .project {
+      background-color: #2a3545;
+      padding: 1rem;
+      border-radius: 8px;
+      border-left: 4px solid #61dafb;
+    }
+    .project a { color: #4da6ff; text-decoration: none; font-weight: 600; }
+    .project a:hover { text-decoration: underline; }
+
+    /* Skills */
+    .skills { display:flex; flex-wrap:wrap; gap:10px; margin-top:10px; }
+    .skill {
+      background-color: #2a3b50;
+      padding: 0.5rem 1rem;
+      border-radius: 20px;
+      font-weight: 500;
+      border: 1px solid #61dafb;
+    }
+
+    /* Contact */
+    .contact {
+      text-align: center;
+      padding: 2rem 1rem;
+      border-radius: 10px;
+      background: linear-gradient(180deg,#263348,#222d3c);
+      color: #eaf4ff;
+      margin-bottom: 2rem;
+    }
+    .contact h1 {
+      color: #61dafb;
+      font-size: 2rem;
+      margin-bottom: 10px;
+      letter-spacing: 1px;
+    }
+    .contact p { font-size: 1rem; margin: 8px 0; }
+    .contact a { color: #9bd1ff; text-decoration: none; font-weight: 600; }
+    .contact a:hover { text-decoration: underline; }
+
+    /* Footer */
+    footer.site-footer {
+      background: #071028;
+      color: #9fb7d9;
+      padding: 1rem;
+      text-align: center;
+      border-top: 1px solid rgba(255,255,255,0.03);
+    }
+    .footer-links {
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+      gap:1rem;
+      margin-bottom:8px;
+    }
+    .footer-links a {
+      color:#9fb7d9;
+      text-decoration:none;
+      font-size: .95rem;
+    }
+    .footer-links a:hover { color: #4da6ff; }
+
+    .small { font-size: .9rem; color:#87a5c8; }
+
+    /* Responsive */
+    @media (max-width:600px){
+      .navbar ul { flex-direction: column; gap: 0.8rem; }
+      .profile-pic { width: 150px; height: 150px; }
+      .content-section { padding: 1.3rem; }
+      .contact h1 { font-size: 1.6rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <nav class="navbar">
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <div class="profile-container" id="about">
+      <img src="htmlpic.jpg" alt="Profile" class="profile-pic" />
+      <h1>Vasavi Yerra</h1>
+      <p>Recently graduated student (2024) — passionate about work and curious to join the IT industry</p>
+    </div>
+  </header>
+
+  <!-- Main Container -->
+  <main class="container">
+
+    <!-- About -->
+    <section class="content-section">
+      <h2 class="section-title">👋 About Me</h2>
+      <p>
+        I am a recent <strong>2024 graduate</strong> with a Bachelor of Technology in <strong>Information Technology</strong>
+        from <strong>Bhoj Reddy Engineering College for Women</strong>.  
+        I’m passionate about learning, eager to work, and curious to begin my career in the <strong>IT industry</strong>.
+        I enjoy building web projects and continuously improving my skills to become a strong developer.
+      </p>
+    </section>
+
+    <!-- Summary -->
+    <section class="content-section">
+      <h2 class="section-title">👤 Professional Summary</h2>
+      <p>
+        Motivated and detail-oriented Computer Science graduate with a strong foundation in
+        <strong>Python</strong>, <strong>HTML</strong>, <strong>CSS</strong>, <strong>SQL</strong>, and <strong>JavaScript</strong>.  
+        Passionate about web and backend development, building responsive and data-driven applications, and solving problems
+        with clean code. Quick learner ready to contribute in Agile teams.
+      </p>
+    </section>
+
+    <!-- Education -->
+    <section class="content-section" id="education">
+      <h2 class="section-title">🎓 Education</h2>
+      <p>
+        <strong>Bachelor of Technology — Information Technology</strong><br />
+        Bhoj Reddy Engineering College for Women, Hyderabad<br />
+        Year of Graduation: <strong>2024</strong>
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section class="content-section" id="projects">
+      <h2 class="section-title">💼 Project</h2>
+      <div class="project">
+        <h3>Go Metro</h3>
+        <p>
+          Developed a metro tracking web application to view real-time timings and routes.  
+          Frontend built with <strong>HTML</strong>, <strong>CSS</strong>, and <strong>JavaScript</strong>.  
+          Backend built with <strong>Python</strong> and <strong>SQL</strong> for data handling.
+          <br /><br />
+          🌐 <a href="https://your-metro.vercel.app/" target="_blank" rel="noopener">View Project</a>
+        </p>
+      </div>
+    </section>
+
+    <!-- Skills -->
+    <section class="content-section" id="skills">
+      <h2 class="section-title">⚙️ Technical Skills</h2>
+      <div class="skills">
+        <div class="skill">Python</div>
+        <div class="skill">HTML</div>
+        <div class="skill">CSS</div>
+        <div class="skill">JavaScript</div>
+        <div class="skill">SQL</div>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="contact" id="contact">
+      <h1>GET IN TOUCH</h1>
+      <p>📞 Contact Number: <strong>8466043598</strong></p>
+      <p>🔗 LinkedIn:
+        <a href="https://www.linkedin.com/in/vasavi-yerra-ba6097303/" target="_blank" rel="noopener">
+          https://www.linkedin.com/in/vasavi-yerra-ba6097303/
+        </a>
+      </p>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-links">
+      <a href="#about">About</a>
+      <a href="#education">Education</a>
+      <a href="#projects">Projects</a>
+      <a href="#skills">Skills</a>
+      <a href="#contact">Contact</a>
+    </div>
+    <div class="small">© <strong>Vasavi Yerra</strong> — 2024. All rights reserved.</div>
+  </footer>
+
+</body>
+</html>
